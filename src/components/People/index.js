@@ -24,10 +24,10 @@ class People extends Component {
       let species = await getData(people.species);
 
       return {
-        name: people.name,
-        homeworld: homeworld.name,
-        species: species.name,
-        population: homeworld.population
+        title: people.name,
+        data1: `Homeworld: ${homeworld.name}`,
+        data2: species.name,
+        data3: homeworld.population
       };
     });
     return await Promise.all(unresolvedPromises);
@@ -35,7 +35,9 @@ class People extends Component {
 
   buildCards = data => {
     if (this.state.people.length) {
-      return data.map(person => <Card {...person} key={person.name} />);
+      return data.map((person, index) => (
+        <Card type="people" setFavorites={this.props.setFavorites} data={person} key={index} />
+      ));
     }
   };
 

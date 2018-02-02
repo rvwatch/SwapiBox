@@ -15,10 +15,13 @@ class Main extends Component {
     };
   }
 
-  setFavorites = (data) => {
+  setFavorites = (favorite) => {
+    console.log(favorite)
     this.setState({
-      favorites: data
+      favorites: {}
     });
+    console.log(this.state.favorites);
+    
   }
 
   render() {
@@ -28,9 +31,9 @@ class Main extends Component {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path='/People'  render={() => (<People setFavorites={this.setFavorites} favorites={this.state.favorites} />)} />
-          <Route path='/Planets' render={() => (<Planets />)} />
-          <Route path='/Vehicles' render={() => (<Vehicles />)} />
-          <Route path='/Favorites' render={() => (<Favorites />)} />
+          <Route path='/Planets' render={() => (<Planets setFavorites={this.setFavorites} favorites={this.state.favorites} />)} />
+          <Route path='/Vehicles' render={() => (<Vehicles setFavorites={this.setFavorites} favorites={this.state.favorites} />)} />
+          <Route path='/Favorites' render={() => (<Favorites setFavorites={this.setFavorites} favorites={this.state.favorites} />)} />
         </Switch>
       </div>
     );

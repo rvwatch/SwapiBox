@@ -14,27 +14,44 @@ class Planets extends Component {
   async componentDidMount() {
     const data = await getData(apiRoot + 'planets');
     const planets = await this.formatData(data);
-
     this.setState({ planets });
   }
 
   async formatData({ results }) {
-    console.log(results);
-    
-    const unresolvedPromises = results.map(async planets => {
-      // let homeworld = await getData(planets.homeworld);
-      // let species = await getData(planets.species);
+    const unresolvedPromises = results.map(async planet => {
+      const residentData = await this.getResidentData(planet.residents);
 
       return {
-        name: planets.name
+        title: planet.name,
+        data1: planet.terrain,
+        data2: planet.population,
+        data3: planet.climate,
+        data4: residentData
       };
+    });
+    return await Promise.all(unresolvedPromises);
+  }
+
+  async getResidentData(urls) {
+    const unresolvedPromises = urls.map(async url => {
+
+      const data = await getData(url);
+      
+      return data.name;
     });
     return await Promise.all(unresolvedPromises);
   }
 
   buildCards = data => {
     if (this.state.planets.length) {
-      return data.map(planet => <Card {...planet} key={planet.name} />);
+      return data.map((planet, index) => (
+        <Card
+          type="planet"
+          setFavorites={this.props.setFavorites}
+          data={planet}
+          key={index}
+        />
+      ));
     }
   };
 
