@@ -23,10 +23,10 @@ class Planets extends Component {
 
       return {
         title: planet.name,
-        data1: planet.terrain,
-        data2: planet.population,
-        data3: planet.climate,
-        data4: residentData
+        data1: `Terrain: ${planet.terrain}`,
+        data2: `Population: ${planet.population}`,
+        data3: `Climate: ${planet.climate}`,
+        data4: `Resident: ${residentData}`
       };
     });
     return await Promise.all(unresolvedPromises);
@@ -48,7 +48,8 @@ class Planets extends Component {
         <Card
           type="planet"
           setFavorites={this.props.setFavorites}
-          data={planet}
+          selected={planet}
+          {...planet}
           key={index}
         />
       ));

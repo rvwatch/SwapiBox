@@ -22,12 +22,12 @@ class Vehicles extends Component {
     const unresolvedPromises = results.map(async vehicle => {
       //let homeworld = await getData(vehicle.homeworld);
       //let species = await getData(vehicle.species);
-      
+
       return {
         title: vehicle.name,
-        data1: vehicle.model,
-        data2: vehicle.vehicle_class,
-        data3: vehicle.passengers
+        data1: `Model: ${vehicle.model}`,
+        data2: `Class: ${vehicle.vehicle_class}`,
+        data3: `Passengers: ${vehicle.passengers}`
       };
     });
     return await Promise.all(unresolvedPromises);
@@ -36,16 +36,20 @@ class Vehicles extends Component {
   buildCards = data => {
     if (this.state.vehicles.length) {
       return data.map((vehicle, index) => (
-        <Card type="vehicle" setFavorites={this.props.setFavorites} {...vehicle} key={index} />
+        <Card
+          type="vehicle"
+          setFavorites={this.props.setFavorites}
+          selected={vehicle}
+          {...vehicle}
+          key={index}
+        />
       ));
     }
   };
 
   render() {
     const vehicle = this.buildCards(this.state.vehicles);
-    return <section className="vehicles-container">
-      {vehicle}
-    </section>;
+    return <section className="vehicles-container">{vehicle}</section>;
   }
 }
 

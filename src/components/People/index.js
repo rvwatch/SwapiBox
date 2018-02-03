@@ -26,8 +26,8 @@ class People extends Component {
       return {
         title: people.name,
         data1: `Homeworld: ${homeworld.name}`,
-        data2: species.name,
-        data3: homeworld.population
+        data2: `Species: ${species.name}`,
+        data3: `Population: ${homeworld.population}`
       };
     });
     return await Promise.all(unresolvedPromises);
@@ -36,7 +36,13 @@ class People extends Component {
   buildCards = data => {
     if (this.state.people.length) {
       return data.map((person, index) => (
-        <Card type="people" setFavorites={this.props.setFavorites} data={person} key={index} />
+        <Card
+          type="people"
+          setFavorites={this.props.setFavorites}
+          selected={person}
+          {...person}
+          key={index}
+        />
       ));
     }
   };
