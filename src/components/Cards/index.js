@@ -1,14 +1,17 @@
 import React from 'react';
 import './Cards.css';
-function Card({ name, homeworld, species, population }) {
+function Card({title, data1, data2, data3, data4, setFavorites, selected}) {
+
+
   return (
     <article className="card">
-      <button>Favorite</button>
-      <h1>{name}</h1>
+      <button onClick={() => setFavorites({ ...selected })}>Favorite</button>
+      <h1>{title}</h1>
       <ul>
-        <li>{homeworld}</li>
-        <li>{species}</li>
-        <li>{population}</li>
+        <li>{data1}</li>
+        <li>{data2}</li>
+        <li>{data3}</li>
+        <li>{data4}</li>
       </ul>
     </article>
   );

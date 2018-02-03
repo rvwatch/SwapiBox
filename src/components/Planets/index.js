@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getData, apiRoot } from '../apiCalls';
+import { getData, apiRoot, cleanPlanetData } from '../apiCalls';
 import Card from '../Cards';
 
 class Planets extends Component {
@@ -13,28 +13,23 @@ class Planets extends Component {
 
   async componentDidMount() {
     const data = await getData(apiRoot + 'planets');
-    const planets = await this.formatData(data);
-
+    const planets = await cleanPlanetData(data);
     this.setState({ planets });
   }
 
-  async formatData({ results }) {
-    console.log(results);
-    
-    const unresolvedPromises = results.map(async planets => {
-      // let homeworld = await getData(planets.homeworld);
-      // let species = await getData(planets.species);
-
-      return {
-        name: planets.name
-      };
-    });
-    return await Promise.all(unresolvedPromises);
-  }
+  
 
   buildCards = data => {
     if (this.state.planets.length) {
-      return data.map(planet => <Card {...planet} key={planet.name} />);
+      return data.map((planet, index) => (
+        <Card
+          type="planet"
+          setFavorites={this.props.setFavorites}
+          selected={planet}
+          {...planet}
+          key={index}
+        />
+      ));
     }
   };
 

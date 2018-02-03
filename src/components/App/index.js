@@ -21,6 +21,7 @@ class App extends Component {
           <li><Link to='/People'>People</Link></li>
           <li><Link to='/Planets'>Planets</Link></li>
           <li><Link to='/Vehicles'>Vehicles</Link></li>
+          <li><Link to='/Favorites'>Favorites</Link></li>
         </ul> 
        <Main  />
       </div>
