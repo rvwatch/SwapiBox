@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getData, apiRoot } from '../apiCalls';
+import { getData, apiRoot, cleanVehicleData } from '../apiCalls';
 import Card from '../Cards';
 
 class Vehicles extends Component {
@@ -13,24 +13,8 @@ class Vehicles extends Component {
 
   async componentDidMount() {
     const data = await getData(apiRoot + 'vehicles');
-    const vehicles = await this.formatData(data);
-
+    const vehicles = await cleanVehicleData(data);
     this.setState({ vehicles });
-  }
-
-  async formatData({ results }) {
-    const unresolvedPromises = results.map(async vehicle => {
-      //let homeworld = await getData(vehicle.homeworld);
-      //let species = await getData(vehicle.species);
-
-      return {
-        title: vehicle.name,
-        data1: `Model: ${vehicle.model}`,
-        data2: `Class: ${vehicle.vehicle_class}`,
-        data3: `Passengers: ${vehicle.passengers}`
-      };
-    });
-    return await Promise.all(unresolvedPromises);
   }
 
   buildCards = data => {
