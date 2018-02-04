@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getData, apiRoot, cleanPeopleData } from '../apiCalls';
 import Card from '../Cards';
+import './People.css'
 
 class People extends Component {
   constructor() {

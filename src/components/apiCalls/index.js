@@ -1,10 +1,20 @@
 export const apiRoot = 'https://swapi.co/api/';
 
 export const getData = async url => {
-  const response = await fetch(`${url}`);
-  const data = await response.json();
-  return data;
+
+  try {
+    const response = await fetch(`${url}`);
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    return 'ERROR!';
+  }
+  
 };
+
+export const getFilmScroll = async ({ results }) => {
+  return results[Math.floor(Math.random()*results.length)];
+}
 
 export const cleanPeopleData = async ({ results }) => {
   const unresolvedPromises = results.map(async people => {
@@ -36,23 +46,26 @@ export const cleanPlanetData = async ({ results }) => {
   return await Promise.all(unresolvedPromises);
 };
 
-const getResidentData = async (urls) => {
+export const getResidentData = async urls => {
+  
   const unresolvedPromises = urls.map(async url => {
-    const data = await getData(url);    
+    const data = await getData(url);
     return data.name;
   });
   return await Promise.all(unresolvedPromises);
 };
 
 export const cleanVehicleData = async ({ results }) => {
+  
   const unresolvedPromises = results.map(async vehicle => {
-
     return {
       title: vehicle.name,
       data1: `Model: ${vehicle.model}`,
       data2: `Class: ${vehicle.vehicle_class}`,
       data3: `Passengers: ${vehicle.passengers}`
     };
+    
   });
+  
   return await Promise.all(unresolvedPromises);
-}
+};

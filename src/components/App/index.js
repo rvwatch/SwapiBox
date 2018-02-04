@@ -5,25 +5,34 @@ import { Link } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
-    this.state = {
-      people: []
-    };
   }
 
   render() {
     return (
       <div>
-        
-        <ul>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/People'>People</Link></li>
-          <li><Link to='/Planets'>Planets</Link></li>
-          <li><Link to='/Vehicles'>Vehicles</Link></li>
-          <li><Link to='/Favorites'>Favorites</Link></li>
-        </ul> 
-       <Main  />
+       
+        <div className="stars"></div>
+        <div className="twinkling"></div>
+        <ul className='main-nav'>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/People">People</Link>
+          </li>
+          <li>
+            <Link to="/Planets">Planets</Link>
+          </li>
+          <li>
+            <Link to="/Vehicles">Vehicles</Link>
+          </li>
+          <li>
+            <Link to="/Favorites">Favorites</Link>
+          </li>
+        </ul>
+        <Main />
       </div>
     );
   }
