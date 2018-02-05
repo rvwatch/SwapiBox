@@ -16,6 +16,7 @@ class Main extends Component {
   }
 
   setFavorites = favorite => {
+    favorite.favorite = !favorite.favorite;
     const nonDuplicate = this.state.favorites.filter(
       thing => favorite.title !== thing.title
     );

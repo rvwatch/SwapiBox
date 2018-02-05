@@ -3,21 +3,18 @@ import {
   cleanVehicleData,
   cleanPlanetData,
   cleanPeopleData,
-  getFilmScroll,
-  getResidentData
+  getFilmScroll
 } from './index';
 
 import {
-  mockData,
   mockPeople,
   mockVehicleData,
   mockedCleanVehicle,
   mockPlanetData,
   mockedCleanPlanet,
   mockFilmData,
-  mockedResidents,
-  mockedCleanResidents,
-  mockURLS
+  mockCharacters,
+  cleanCharacter
 } from './mockedData';
 
 describe('getData', () => {
@@ -69,35 +66,55 @@ describe('getFilmScroll', () => {
 });
 
 describe('cleanPeople', () => {
-  it('should return a cleaned person when passed data is passed into it', async () => {
-    
+  let expectedParams;
 
-    
+  beforeEach(() => {
+
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        ok: true,
+        status: 200,
+        json: () =>
+          Promise.resolve({
+            data: mockCharacters
+          })
+      });
+    });
+  });
+  it('should return a cleaned person when passed data is passed into it', async () => {
+    expect(cleanPeopleData(mockCharacters)).resolves.toEqual(cleanCharacter);
   });
 });
 
 describe('cleanPlanet', async () => {
   let getResidentData;
+  let expectedParams;
+
+  beforeEach(() => {
+    expectedParams = 'http://swapi/api';
+
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        ok: true,
+        status: 200,
+        json: () =>
+          Promise.resolve({
+            data: mockPlanetData
+          })
+      });
+    });
+  });
+
   it('should return a cleaned planet when passed data is passed into it', async () => {
-    getResidentData = jest.fn()
+    getResidentData = jest.fn();
     const returnedPlanet = await cleanPlanetData(mockPlanetData);
     expect(getResidentData).toHaveBeenCalled;
     expect(returnedPlanet).toEqual(mockedCleanPlanet);
-    
+  });
+  it('should return residents info', async () => {
+    expect(getData(expectedParams)).resolves.toEqual({ data: mockPlanetData });
   });
 });
-
-// describe('getResidentData', async () => {
-  
-//   it('should return an array of resident names', async () => {
-    
-
-//     const returnedResidents = await getResidentData(mockedResidents);
-//     expect(window.fetch).toHaveBeenCalledWith(mockURLS);
-//     expect(returnedResidents).toEqual(mockedCleanResidents);
-//   });
-// });
-
 
 describe('cleanVehicleData', () => {
   it('should return a cleaned vehicle when passed data is passed into it', async () => {

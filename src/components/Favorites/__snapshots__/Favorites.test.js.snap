@@ -1,0 +1,445 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Favorites  renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Favorites
+    favorites={
+        Array [
+            Object {
+              "data1": "Terrain: ocean",
+              "data2": "Population: 1000000000",
+              "data3": "Climate: temperate",
+              "data4": "Resident: Boba Fett,Lama Su,Taun We",
+              "favorite": true,
+              "title": "Kamino",
+            },
+          ]
+    }
+    setFavorites={
+        Array [
+            Object {
+              "data1": "Terrain: ocean",
+              "data2": "Population: 1000000000",
+              "data3": "Climate: temperate",
+              "data4": "Resident: Boba Fett,Lama Su,Taun We",
+              "favorite": true,
+              "title": "Kamino",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        " ",
+        Array [
+          <Card
+            data1="Terrain: ocean"
+            data2="Population: 1000000000"
+            data3="Climate: temperate"
+            data4="Resident: Boba Fett,Lama Su,Taun We"
+            favorite={true}
+            selected={
+                        Object {
+                                    "data1": "Terrain: ocean",
+                                    "data2": "Population: 1000000000",
+                                    "data3": "Climate: temperate",
+                                    "data4": "Resident: Boba Fett,Lama Su,Taun We",
+                                    "favorite": true,
+                                    "title": "Kamino",
+                                  }
+            }
+            setFavorites={
+                        Array [
+                                    Object {
+                                      "data1": "Terrain: ocean",
+                                      "data2": "Population: 1000000000",
+                                      "data3": "Climate: temperate",
+                                      "data4": "Resident: Boba Fett,Lama Su,Taun We",
+                                      "favorite": true,
+                                      "title": "Kamino",
+                                    },
+                                  ]
+            }
+            title="Kamino"
+            type="favorites"
+/>,
+        ],
+        " ",
+      ],
+      "className": "favorites-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      " ",
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "data1": "Terrain: ocean",
+          "data2": "Population: 1000000000",
+          "data3": "Climate: temperate",
+          "data4": "Resident: Boba Fett,Lama Su,Taun We",
+          "favorite": true,
+          "selected": Object {
+            "data1": "Terrain: ocean",
+            "data2": "Population: 1000000000",
+            "data3": "Climate: temperate",
+            "data4": "Resident: Boba Fett,Lama Su,Taun We",
+            "favorite": true,
+            "title": "Kamino",
+          },
+          "setFavorites": Array [
+            Object {
+              "data1": "Terrain: ocean",
+              "data2": "Population: 1000000000",
+              "data3": "Climate: temperate",
+              "data4": "Resident: Boba Fett,Lama Su,Taun We",
+              "favorite": true,
+              "title": "Kamino",
+            },
+          ],
+          "title": "Kamino",
+          "type": "favorites",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      " ",
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          " ",
+          Array [
+            <Card
+              data1="Terrain: ocean"
+              data2="Population: 1000000000"
+              data3="Climate: temperate"
+              data4="Resident: Boba Fett,Lama Su,Taun We"
+              favorite={true}
+              selected={
+                            Object {
+                                          "data1": "Terrain: ocean",
+                                          "data2": "Population: 1000000000",
+                                          "data3": "Climate: temperate",
+                                          "data4": "Resident: Boba Fett,Lama Su,Taun We",
+                                          "favorite": true,
+                                          "title": "Kamino",
+                                        }
+              }
+              setFavorites={
+                            Array [
+                                          Object {
+                                            "data1": "Terrain: ocean",
+                                            "data2": "Population: 1000000000",
+                                            "data3": "Climate: temperate",
+                                            "data4": "Resident: Boba Fett,Lama Su,Taun We",
+                                            "favorite": true,
+                                            "title": "Kamino",
+                                          },
+                                        ]
+              }
+              title="Kamino"
+              type="favorites"
+/>,
+          ],
+          " ",
+        ],
+        "className": "favorites-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        " ",
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "data1": "Terrain: ocean",
+            "data2": "Population: 1000000000",
+            "data3": "Climate: temperate",
+            "data4": "Resident: Boba Fett,Lama Su,Taun We",
+            "favorite": true,
+            "selected": Object {
+              "data1": "Terrain: ocean",
+              "data2": "Population: 1000000000",
+              "data3": "Climate: temperate",
+              "data4": "Resident: Boba Fett,Lama Su,Taun We",
+              "favorite": true,
+              "title": "Kamino",
+            },
+            "setFavorites": Array [
+              Object {
+                "data1": "Terrain: ocean",
+                "data2": "Population: 1000000000",
+                "data3": "Climate: temperate",
+                "data4": "Resident: Boba Fett,Lama Su,Taun We",
+                "favorite": true,
+                "title": "Kamino",
+              },
+            ],
+            "title": "Kamino",
+            "type": "favorites",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        " ",
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;
+
+exports[`Favorites  renders correctly when given two cards 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Favorites
+    favorites={
+        Array [
+            Object {
+              "data1": "Terrain: ocean",
+              "data2": "Population: 1000000000",
+              "data3": "Climate: temperate",
+              "data4": "Resident: Boba Fett,Lama Su,Taun We",
+              "favorite": true,
+              "title": "Kamino",
+            },
+          ]
+    }
+    setFavorites={
+        Array [
+            Object {
+              "data1": "Terrain: ocean",
+              "data2": "Population: 1000000000",
+              "data3": "Climate: temperate",
+              "data4": "Resident: Boba Fett,Lama Su,Taun We",
+              "favorite": true,
+              "title": "Kamino",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        " ",
+        Array [
+          <Card
+            data1="Terrain: ocean"
+            data2="Population: 1000000000"
+            data3="Climate: temperate"
+            data4="Resident: Boba Fett,Lama Su,Taun We"
+            favorite={true}
+            selected={
+                        Object {
+                                    "data1": "Terrain: ocean",
+                                    "data2": "Population: 1000000000",
+                                    "data3": "Climate: temperate",
+                                    "data4": "Resident: Boba Fett,Lama Su,Taun We",
+                                    "favorite": true,
+                                    "title": "Kamino",
+                                  }
+            }
+            setFavorites={
+                        Array [
+                                    Object {
+                                      "data1": "Terrain: ocean",
+                                      "data2": "Population: 1000000000",
+                                      "data3": "Climate: temperate",
+                                      "data4": "Resident: Boba Fett,Lama Su,Taun We",
+                                      "favorite": true,
+                                      "title": "Kamino",
+                                    },
+                                  ]
+            }
+            title="Kamino"
+            type="favorites"
+/>,
+        ],
+        " ",
+      ],
+      "className": "favorites-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      " ",
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "data1": "Terrain: ocean",
+          "data2": "Population: 1000000000",
+          "data3": "Climate: temperate",
+          "data4": "Resident: Boba Fett,Lama Su,Taun We",
+          "favorite": true,
+          "selected": Object {
+            "data1": "Terrain: ocean",
+            "data2": "Population: 1000000000",
+            "data3": "Climate: temperate",
+            "data4": "Resident: Boba Fett,Lama Su,Taun We",
+            "favorite": true,
+            "title": "Kamino",
+          },
+          "setFavorites": Array [
+            Object {
+              "data1": "Terrain: ocean",
+              "data2": "Population: 1000000000",
+              "data3": "Climate: temperate",
+              "data4": "Resident: Boba Fett,Lama Su,Taun We",
+              "favorite": true,
+              "title": "Kamino",
+            },
+          ],
+          "title": "Kamino",
+          "type": "favorites",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      " ",
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          " ",
+          Array [
+            <Card
+              data1="Terrain: ocean"
+              data2="Population: 1000000000"
+              data3="Climate: temperate"
+              data4="Resident: Boba Fett,Lama Su,Taun We"
+              favorite={true}
+              selected={
+                            Object {
+                                          "data1": "Terrain: ocean",
+                                          "data2": "Population: 1000000000",
+                                          "data3": "Climate: temperate",
+                                          "data4": "Resident: Boba Fett,Lama Su,Taun We",
+                                          "favorite": true,
+                                          "title": "Kamino",
+                                        }
+              }
+              setFavorites={
+                            Array [
+                                          Object {
+                                            "data1": "Terrain: ocean",
+                                            "data2": "Population: 1000000000",
+                                            "data3": "Climate: temperate",
+                                            "data4": "Resident: Boba Fett,Lama Su,Taun We",
+                                            "favorite": true,
+                                            "title": "Kamino",
+                                          },
+                                        ]
+              }
+              title="Kamino"
+              type="favorites"
+/>,
+          ],
+          " ",
+        ],
+        "className": "favorites-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        " ",
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "data1": "Terrain: ocean",
+            "data2": "Population: 1000000000",
+            "data3": "Climate: temperate",
+            "data4": "Resident: Boba Fett,Lama Su,Taun We",
+            "favorite": true,
+            "selected": Object {
+              "data1": "Terrain: ocean",
+              "data2": "Population: 1000000000",
+              "data3": "Climate: temperate",
+              "data4": "Resident: Boba Fett,Lama Su,Taun We",
+              "favorite": true,
+              "title": "Kamino",
+            },
+            "setFavorites": Array [
+              Object {
+                "data1": "Terrain: ocean",
+                "data2": "Population: 1000000000",
+                "data3": "Climate: temperate",
+                "data4": "Resident: Boba Fett,Lama Su,Taun We",
+                "favorite": true,
+                "title": "Kamino",
+              },
+            ],
+            "title": "Kamino",
+            "type": "favorites",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        " ",
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

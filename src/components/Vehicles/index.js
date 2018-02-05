@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { getData, apiRoot, cleanVehicleData } from '../apiCalls';
 import Card from '../Cards';
+import './Vehicles.css';
 
 class Vehicles extends Component {
   constructor() {
@@ -23,6 +25,7 @@ class Vehicles extends Component {
         <Card
           type="vehicle"
           setFavorites={this.props.setFavorites}
+          favoriteArray={this.props.favorites}
           selected={vehicle}
           {...vehicle}
           key={index}
@@ -36,5 +39,10 @@ class Vehicles extends Component {
     return <section className="vehicles-container">{vehicle}</section>;
   }
 }
+
+Vehicles.propTypes = {
+  setFavorites: PropTypes.object,
+  favorites: PropTypes.array
+};
 
 export default Vehicles;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Home from '../Home';
 import Main from '../Main';
 import { Link } from 'react-router-dom';
 import './App.css';
@@ -11,13 +10,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-       
+      <div className='app-wrap'>
         <div className="stars"></div>
         <div className="twinkling"></div>
         <ul className='main-nav'>
-          <li>
-            <Link to="/">Home</Link>
+          <li className='title'>
+            <Link to="/">SWAPI BOX</Link>
           </li>
           <li>
             <Link to="/People">People</Link>

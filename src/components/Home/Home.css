@@ -1,9 +1,6 @@
 body,
 html {
-    width: 100%;
-    height: 100%;
     background: #000;
-    overflow: hidden;
     font-family: 'Pathway Gothic One', sans-serif;
   }
   
