@@ -5,6 +5,7 @@ import Planets from '../Planets';
 import Vehicles from '../Vehicles';
 import Favorites from '../Favorites';
 import { Route, Switch } from 'react-router-dom';
+import './Main.css';
 
 class Main extends Component {
   constructor() {
@@ -15,6 +16,7 @@ class Main extends Component {
   }
 
   setFavorites = favorite => {
+    favorite.favorite = !favorite.favorite;
     const nonDuplicate = this.state.favorites.filter(
       thing => favorite.title !== thing.title
     );
@@ -29,7 +31,7 @@ class Main extends Component {
   render() {
 
     return (
-      <div className={'main-wrap'}>
+      <div className='main-wrap'>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route

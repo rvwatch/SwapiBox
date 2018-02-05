@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Card from '../Cards';
+import './Favorites.css';
 
 class Favorites extends Component {
   constructor() {
@@ -30,13 +32,18 @@ class Favorites extends Component {
     const createFavorites = this.buildCards(this.props.favorites);
 
     if (this.props.favorites.length) {
-      return <section> {createFavorites} </section>;
+      return <section className='favorites-container'> {createFavorites} </section>;
     } else {
-      return <section>
-        <h1>There are no favorites!</h1>
+      return <section className='favorites-container'>
+        <h1 className='no-favs-message'>GO ADD SOME FAVORITES!</h1>
       </section>;
     }
   }
 }
+
+Favorites.propTypes = {
+  setFavorites: PropTypes.object,
+  favorites: PropTypes.array
+};
 
 export default Favorites;

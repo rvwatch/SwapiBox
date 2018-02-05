@@ -1,0 +1,16 @@
+.favorites-container{
+    margin: 120px auto auto auto;
+    text-align: center;
+  }
+
+.no-favs-message{
+    font-size: 70px;
+    width: 300px;
+    text-align: center;
+    font-weight: lighter;
+    color: #feda4a;
+    margin: 100px auto auto auto;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #feda4a;
+}
