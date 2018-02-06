@@ -41,7 +41,7 @@ class Vehicles extends Component {
 }
 
 Vehicles.propTypes = {
-  setFavorites: PropTypes.object,
+  setFavorites: PropTypes.func,
   favorites: PropTypes.array
 };
 
